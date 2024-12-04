@@ -1,0 +1,33 @@
+{
+  "name": "memes",
+  "description": "my take on memes",
+  "author": "Matthew {Archangel | The Nothing} Alexander",
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "url": "https://github.com/archangel-12/memes"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "update": "bun update",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "install": "^0.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.2"
+  },
+  "dependencies": {
+    "core-util-is": "^1.0.3",
+    "reveal.js": "^5.1.0",
+    "vercel": "^39.1.2"
+  }
+}

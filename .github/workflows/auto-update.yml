@@ -1,0 +1,36 @@
+name: fape nation...
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-core-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for proper Git operations
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Update Dependencies in Core
+        working-directory: ./core
+        run: |
+          bun update --save
+
+      - name: Commit and Push Changes
+        working-directory: ./core
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json bun.lockb
+          git commit -m "chore: update dependencies in core folder"
+          git push origin HEAD
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}

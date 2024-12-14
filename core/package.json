@@ -28,6 +28,6 @@
   "dependencies": {
     "core-util-is": "^1.0.3",
     "reveal.js": "^5.1.0",
-    "vercel": "^39.2.0"
+    "vercel": "^39.2.2"
   }
 }

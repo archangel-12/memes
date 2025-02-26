@@ -206,4 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
    </div>
       `;
   document.body.appendChild(slidesContainer);
+
+  if (window.Reveal) {
+    Reveal.initialize();
+  } else {
+    console.error("Reveal.js not loaded");
+  }
 });

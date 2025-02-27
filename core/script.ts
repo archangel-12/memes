@@ -80,7 +80,6 @@
 //                 manner similar to “selfish” genes, as being in control of their
 //                 own reproduction and thus serving their own ends.
 //               </blockquote>
-//               a
 //             </section>
 //             <section
 //               data-background-image="https://media1.tenor.com/m/I3JzANPyLaYAAAAd/ryan-gosling-confused.gif"
@@ -389,8 +388,7 @@
 //       `;
 //   document.body.appendChild(slidesContainer);
 //   if (window.Reveal) {
-//   Reveal.initialize();
-// 
+//     Reveal.initialize();
 //   } else {
 //     console.error("Reveal.js not loaded");
 //   }

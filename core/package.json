@@ -22,13 +22,13 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
-    "vite": "^7.0.2"
+    "vite": "^7.0.4"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
     "@tailwindcss/vite": "^4.1.11",
     "core-util-is": "^1.0.3",
     "reveal.js": "^5.2.1",
-    "vercel": "^44.2.12"
+    "vercel": "^44.4.1"
   }
 }

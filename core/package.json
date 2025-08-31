@@ -29,6 +29,6 @@
     "@tailwindcss/vite": "^4.1.12",
     "core-util-is": "^1.0.3",
     "reveal.js": "^5.2.1",
-    "vercel": "^46.0.2"
+    "vercel": "^46.1.1"
   }
 }

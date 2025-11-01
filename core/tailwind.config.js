@@ -7,7 +7,7 @@ export default {
   plugins: [],
   server: {
     hmr: {
-      overlay: false,
+      overlay: true,
     },
   },
 };

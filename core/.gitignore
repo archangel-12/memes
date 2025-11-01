@@ -19,3 +19,4 @@ dist-ssr
 *.sln
 *.sw?
 bun.lockb
+.gitpod.yml

@@ -1,10 +1,31 @@
-import "./style.css";
-import Reveal from "reveal.js";
-import Markdown from "reveal.js/plugin/markdown/markdown.esm.js";
+import Reveal from "./node_modules/reveal.js/dist/reveal.esm.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  let deck = new Reveal({
-    plugins: [Markdown],
+const slidesContainer = document.getElementById("slides");
+
+const components = [
+  "components/Introduction.html",
+  "components/Definition.html",
+  "components/Characteristics.html",
+  "components/Impacts.html",
+  "components/End.html",
+];
+
+async function loadSlides() {
+  for (const file of components) {
+    try {
+      const res = await fetch(file);
+      if (!res.ok) throw new Error(`${file} not found`);
+      const html = await res.text();
+      slidesContainer.insertAdjacentHTML("beforeend", html);
+    } catch (err) {
+      console.error("Error loading slide:", err);
+    }
+  }
+
+  const deck = new Reveal();
+  deck.initialize({
+    transition: "fade",
   });
-  deck.initialize();
-});
+}
+
+loadSlides();
